@@ -1,1 +1,6 @@
-
+void createBoard (){
+  line((1/3)*COLUMN_WIDTH, 0, (1/3)*COLUMN_WIDTH, COLUMN_WIDTH);
+  line((2/3)*COLUMN_WIDTH, 0, (2/3)*COLUMN_WIDTH, COLUMN_WIDTH);
+  line(0, (1/3)*COLUMN_WIDTH, 0, (1/3)*COLUMN_WIDTH);
+  line(0, (2/3)*COLUMN_WIDTH, 0, (2/3)*COLUMN_WIDTH);
+}
