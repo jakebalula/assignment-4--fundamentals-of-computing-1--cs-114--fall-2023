@@ -1,4 +1,4 @@
-char [][] board;
+char [][] board; //The 2d character array allows for the game to be played with the actual characters 'x' and 'o' but this is not seen by the user, this is how the program checks if a square is full aswell
 
 void setupGame(){
   board = new char[BOARD_SIZE][BOARD_SIZE];
@@ -76,7 +76,7 @@ boolean checkWin(char player) {
 
 void playComputerTurn(){
   while (true) {
-    int row = int(random(BOARD_SIZE));
+    int row = int(random(BOARD_SIZE)); //lets computer play in a random square
     int col = int(random(BOARD_SIZE));
     if (isSquareEmpty(row,col)){
       board[row][col] = 'X';

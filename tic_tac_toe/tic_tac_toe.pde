@@ -11,7 +11,7 @@ void draw() {
 void keyPressed() {
   if (gameInProgress) {
     if (key >= '0' && key <= '8') {
-      int position = key - '0'; // Convert ASCII to numeric value
+      int position = key - '0'; //if the key is valid between 0-8 these next three lines convert it to a position on the game board
       int row = position / BOARD_SIZE;
       int col = position % BOARD_SIZE;
 
@@ -21,9 +21,9 @@ void keyPressed() {
         if (gameInProgress) {
           playComputerTurn();
         }
-       } else {
+        } else {
          println("Square is occupied, choose a new one");
-       }
+         }
       } else {
         println("Invalid key. Press a numeric key between 0-8.");
       }
