@@ -46,7 +46,7 @@ void playUserTurn(int row, int col) {
       println("Board full, no one wins.");
       gameInProgress = false;
     }
-    displayBoard();
+    displayBoard(); //draws the actual circle shape
   } else {
     println("Square is already occupied.");
   }
@@ -80,7 +80,7 @@ void playComputerTurn(){
     int col = int(random(BOARD_SIZE));
     if (isSquareEmpty(row,col)){
       board[row][col] = 'X';
-      displayBoard();
+      displayBoard(); //draws the x using the displayBoard method
       if (checkWin('X')) {
       println("The computer has won.");
       gameInProgress = false;
