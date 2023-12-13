@@ -16,10 +16,14 @@ void keyPressed() {
       int col = position % BOARD_SIZE;
 
       if (row >= 0 && row < BOARD_SIZE && col >= 0 && col < BOARD_SIZE) {
+        if (isSquareEmpty(row,col)) {
         playUserTurn(row, col);
         if (gameInProgress) {
           playComputerTurn();
         }
+       } else {
+         println("Square is occupied, choose a new one");
+       }
       } else {
         println("Invalid key. Press a numeric key between 0-8.");
       }

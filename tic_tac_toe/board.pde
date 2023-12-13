@@ -80,6 +80,7 @@ void playComputerTurn(){
     int col = int(random(BOARD_SIZE));
     if (isSquareEmpty(row,col)){
       board[row][col] = 'X';
+      displayBoard();
       if (checkWin('X')) {
       println("The computer has won.");
       gameInProgress = false;
